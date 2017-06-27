@@ -21,7 +21,8 @@ everyone to see who owns each instance and what it's purpose is.
 
 The terraform file specifies one (count=1) EC2 instance.  Change the value of count to create mutliple servers of the same type.  The default
 region is us-east-2 (Ohio) but can be changed.  Likewise this calls
-for a specific AMI and instance type, which can also be changed.
+for a specific AMI and instance type, which can also be changed.  The
+one used here is for an Ubuntu 16.04 image using local SSD.
 
 This example shows how to tag the instance with some common tags.  You
 can edit these to fit your specific purposes.  The "Name" tag is what
