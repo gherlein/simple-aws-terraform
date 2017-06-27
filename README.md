@@ -1,6 +1,6 @@
-#Simple Terraform Example
+# Simple Terraform Example
 
-##Prerequisites
+## Prerequisites
 
 You need to have the AWS command line tools installed and configured.
 
@@ -11,13 +11,13 @@ Guide](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
 
 Terraform will read your AWS credentials from the .aws folder that is created.
 
-##Assumptions
+## Assumptions
 
 These examples assume an AWS account with several individual IAM users
 authorized.  We tag each instance with several common tags to enable
 everyone to see who owns each instance and what it's purpose is.
 
-##Simple One/Few Server Example
+## Simple One/Few Server Example
 
 The terraform file specifies one (count=1) EC2 instance.  Change the value of count to create mutliple servers of the same type.  The default
 region is us-east-2 (Ohio) but can be changed.  Likewise this calls
@@ -34,7 +34,7 @@ the current working directory.  So you need to be in the folder that
 holds the .tf file.  Terraform will create several files to hold state
 information as it works.  DO NOT delete those files.
 
-###Test Your Configuration using the PLAN command
+### Test Your Configuration using the PLAN command
 
 To use this simple config, do this:
 
@@ -98,7 +98,7 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 If youd did not see this, you made an error editing the file.  Please
 go fix that.
 
-###Create the Resource using the APPLY command
+### Create the Resource using the APPLY command
 
 You can then actually create the resources in AWS using the "apply"
 command.
@@ -110,7 +110,7 @@ TF_VAR_UNAME="<your username>" terraform apply
 
 The resource will be created in AWS.
 
-###See the State of the Resource using the SHOW command
+### See the State of the Resource using the SHOW command
 
 You can see the status of the resource using the "show" command
 
@@ -159,7 +159,7 @@ aws_instance.test:
   vpc_security_group_ids.2830017738 = sg-d73b03be
 ```
 
-###Destroying the Resource using the DESTROY command
+### Destroying the Resource using the DESTROY command
 
 When you no longer need the resource you can destroy it like this:
 
